@@ -4,53 +4,50 @@ using UnityEngine;
 
 public class redGhostMovement : MonoBehaviour {
 
-	public float ghostSpeed = 0.30f;
+	public Rigidbody2D ghostRB;
+	public float ghostSpeed;
+	private Vector2 ghostMovement;
 
-	public Rigidbody ghostRB;
-
-	private int moveX = -1;
-	private int moveY = 0;
-
-	// Use this for initialization
+	// Set speed and set ghost component
 	void Start () 
 	{
-		
+		ghostSpeed = 200f;
+		ghostRB = GetComponent<Rigidbody2D>();
 	}
 
-	// Update is called once per frame
+	// Change movement of ghost
 	void FixedUpdate () 
 	{
-		// If there is a collision or intersection...
-		changeDirection(ref moveX, ref moveY);
+		updateDirection(ref ghostMovement);
+		ghostRB.velocity = ghostMovement * ghostSpeed * Time.deltaTime;
 	}
 
-	void changeDirection(ref int x, ref int y)
+	// Get new direction for ghost
+	void updateDirection(ref Vector2 ghostDirection)
 	{
-		int direction = Random.Range(1, 4);
-		
-		// Move left
-		if (direction == 1)
+		int x = 0;
+		int y = 0;
+		int direction = Random.Range(0, 2);
+
+		// If direction is 0, the ghost will move vertically
+		if(direction == 0)
 		{
-			x = -1;
-			y = 0;
+			y = Random.Range(0, 2);
+			if(y == 0)
+			{
+				y = -1;
+			}
+			ghostDirection = new Vector2(x, y);
 		}
-		// Move right
-		else if (direction == 2)
-		{
-			x = 1;
-			y = 0;
-		}
-		// Move down
-		else if (direction == 3)
-		{
-			x = 0;
-			y = -1;
-		}
-		// Move up
+		// Otherwise, the ghost will move horizontally
 		else
 		{
-			x = 0;
-			y = 1;
+			x = Random.Range(0, 2);
+			if (x == 0)
+			{
+				x = -1;
+			}
+			ghostDirection = new Vector2(x, y);
 		}
 	}
 }
