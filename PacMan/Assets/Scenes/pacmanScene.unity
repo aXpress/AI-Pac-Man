@@ -178,7 +178,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
@@ -301,6 +301,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &621650578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff,
+    type: 2}
+  m_PrefabInternal: {fileID: 1922801902}
 --- !u!1 &933877472
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +371,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1830700468898174, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
       propertyPath: m_Name
@@ -1679,6 +1684,7 @@ Transform:
   - {fileID: 2122863093}
   - {fileID: 1877359319}
   - {fileID: 2010747503}
+  - {fileID: 621650578}
   m_Father: {fileID: 519420032}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1790,7 +1796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0417e218beab415d88671b23d34a081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.4
+  speed: 0.3
 --- !u!58 &1504223466
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1953,6 +1959,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff,
     type: 2}
   m_PrefabInternal: {fileID: 1022730567}
+--- !u!1001 &1922801902
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1450193546}
+    m_Modifications:
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -33.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830700468898174, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+      propertyPath: m_Name
+      value: dot (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1947742382
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,7 +2164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220818948869146, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1830700468898174, guid: edad67ce2db529646bcce05c88fc4eff, type: 2}
       propertyPath: m_Name
