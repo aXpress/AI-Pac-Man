@@ -2,36 +2,35 @@
 using System.Collections;
 
 public class PacmanMovement : MonoBehaviour {
-    public float speed = 0.4f;
+    public float speed = 4.0f;
     Vector2 dest = Vector2.zero;
 
     void Start() {
-        dest = transform.position;
+        //dest = transform.position;
     }
 
-    void FixedUpdate() {
-        // Move closer to Destination
-        Vector2 p = Vector2.MoveTowards(transform.position, dest, speed);
-        GetComponent<Rigidbody2D>().MovePosition(p);
-
-        // Check for Input if not moving or if moving
+    void Update() {
+        checkInput();
+        Move();
+    }
+    void checkInput(){
         if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
-            dest = (Vector2)transform.position + Vector2.up;
+            dest = Vector2.up;
         if (Input.GetKey(KeyCode.RightArrow) && valid(Vector2.right))
-            dest = (Vector2)transform.position + Vector2.right;
-        if (Input.GetKey(KeyCode.DownArrow) && valid(-Vector2.up))
-            dest = (Vector2)transform.position - Vector2.up;
-        if (Input.GetKey(KeyCode.LeftArrow) && valid(-Vector2.right))
-            dest = (Vector2)transform.position - Vector2.right;
-        Vector2 dir = dest - (Vector2)transform.position;
-        GetComponent<Animator>().SetFloat("DirX", dir.x);
-        GetComponent<Animator>().SetFloat("DirY", dir.y);
+            dest = Vector2.right;
+        if (Input.GetKey(KeyCode.DownArrow) && valid(Vector2.down))
+            dest = Vector2.down;
+        if (Input.GetKey(KeyCode.LeftArrow) && valid(Vector2.left))
+            dest = Vector2.left;
     }
-
     bool valid(Vector2 direction) {
         Vector2 pos = transform.position;
-        direction = direction * 0.5f;
         RaycastHit2D hit = Physics2D.Linecast(pos + direction, pos);
         return (hit.collider == GetComponent<Collider2D>());
+    }
+    void Move(){
+        GetComponent<Animator>().SetFloat("DirX", dest.x);
+        GetComponent<Animator>().SetFloat("DirY", dest.y);
+        transform.localPosition += (Vector3)(dest * speed) * Time.deltaTime;
     }
 }
