@@ -16,7 +16,7 @@ public class ghostMovement : MonoBehaviour {
 		}
 		else 
 		{
-			cur = cur + 1 % (checkpoints.Length);
+			cur = (cur + 1) % checkpoints.Length;
 		}
 	}
 }
