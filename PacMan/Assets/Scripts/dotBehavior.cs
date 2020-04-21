@@ -6,7 +6,7 @@ public class dotBehavior : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D collision)
 	{
-		if(collision.gameObject.name == "pacman_sprite_0")
+		if(collision.gameObject.name == "pacman_sprite_0" || collision.gameObject.name == "pacman_sprite_ai")
 			Destroy(this.gameObject);
 			// Debug.Log("collsion detected");
 	}
