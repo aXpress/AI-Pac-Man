@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Threading;
 
 public class PacmanMovement : MonoBehaviour {
     public float speed = 4.0f;
@@ -36,16 +37,16 @@ public class PacmanMovement : MonoBehaviour {
         transform.localPosition += (Vector3)(dest * speed) * Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
 	{
         bool hit_ghost = false;
-		if(collision.gameObject.name == "blue_ghost")
+		if(collision.name == "blue_ghost_p")
             hit_ghost = true;
-        if(collision.gameObject.name == "pink_ghost")
+        if(collision.name == "pink_ghost_p")
             hit_ghost = true;
-        if(collision.gameObject.name == "red_ghost")
+        if(collision.name == "red_ghost_p")
             hit_ghost = true;
-        if(collision.gameObject.name == "orange_ghost")
+        if(collision.name == "orange_ghost_p")
             hit_ghost = true;
         if(hit_ghost == true){
             if(lives == 3){
@@ -58,6 +59,8 @@ public class PacmanMovement : MonoBehaviour {
                 Destroy (GameObject.FindWithTag("life_one"));
             }
             lives--;
+            int milliseconds = 500;
+            Thread.Sleep(milliseconds);
             //Debug.Log(lives);
         }
 	}
