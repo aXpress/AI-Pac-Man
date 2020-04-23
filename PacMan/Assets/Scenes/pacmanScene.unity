@@ -1945,6 +1945,7 @@ GameObject:
   - component: {fileID: 258900074}
   - component: {fileID: 258900073}
   - component: {fileID: 258900072}
+  - component: {fileID: 258900075}
   m_Layer: 0
   m_Name: blue_ghost_p
   m_TagString: Untagged
@@ -2046,6 +2047,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &258900075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 258900070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 5
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 1889197055}
+  - {fileID: 1526480421}
 --- !u!1 &316554434
 GameObject:
   m_ObjectHideFlags: 0
@@ -3779,6 +3796,7 @@ GameObject:
   - component: {fileID: 794716836}
   - component: {fileID: 794716835}
   - component: {fileID: 794716834}
+  - component: {fileID: 794716837}
   m_Layer: 0
   m_Name: orange_ghost_p
   m_TagString: Untagged
@@ -3880,6 +3898,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &794716837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 794716832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 7
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 1889197055}
+  - {fileID: 1526480421}
 --- !u!1 &794836800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4675,6 +4709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 0
+  ghostSpeed: 0.1
   checkpoints:
   - {fileID: 733732646}
   - {fileID: 924736687}
@@ -4696,7 +4732,6 @@ MonoBehaviour:
   - {fileID: 1300253096}
   - {fileID: 672261632}
   - {fileID: 1526480421}
-  ghostSpeed: 0.1
 --- !u!50 &1074584070
 Rigidbody2D:
   serializedVersion: 4
@@ -4977,6 +5012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitTime: 0
+  ghostSpeed: 0.1
   checkpoints:
   - {fileID: 1436108496}
   - {fileID: 250682582}
@@ -4998,7 +5035,6 @@ MonoBehaviour:
   - {fileID: 429028728}
   - {fileID: 1033177467}
   - {fileID: 2024724713}
-  ghostSpeed: 0.1
 --- !u!1 &1155056554
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,6 +5158,7 @@ GameObject:
   - component: {fileID: 1210703938}
   - component: {fileID: 1210703936}
   - component: {fileID: 1210703937}
+  - component: {fileID: 1210703939}
   m_Layer: 0
   m_Name: pink_ghost_ai
   m_TagString: Untagged
@@ -5223,6 +5260,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1210703939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210703934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 3
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 2024724713}
 --- !u!1 &1213927017
 GameObject:
   m_ObjectHideFlags: 0
@@ -7313,6 +7365,7 @@ GameObject:
   - component: {fileID: 1622350268}
   - component: {fileID: 1622350266}
   - component: {fileID: 1622350267}
+  - component: {fileID: 1622350269}
   m_Layer: 0
   m_Name: blue_ghost_ai
   m_TagString: Untagged
@@ -7414,6 +7467,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1622350269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1622350264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 5
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 1589288624}
+  - {fileID: 2024724713}
 --- !u!1 &1659898793
 GameObject:
   m_ObjectHideFlags: 0
@@ -7588,6 +7657,7 @@ GameObject:
   - component: {fileID: 1726986255}
   - component: {fileID: 1726986254}
   - component: {fileID: 1726986253}
+  - component: {fileID: 1726986256}
   m_Layer: 0
   m_Name: pink_ghost_p
   m_TagString: Untagged
@@ -7689,6 +7759,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1726986256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1726986251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 3
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 1526480421}
 --- !u!1 &1748455782
 GameObject:
   m_ObjectHideFlags: 0
@@ -8334,6 +8419,7 @@ GameObject:
   - component: {fileID: 1947742386}
   - component: {fileID: 1947742385}
   - component: {fileID: 1947742384}
+  - component: {fileID: 1947742387}
   m_Layer: 0
   m_Name: orange_ghost_ai
   m_TagString: Untagged
@@ -8435,6 +8521,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1947742387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1947742382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 7
+  ghostSpeed: 0.1
+  checkpoints:
+  - {fileID: 1589288624}
+  - {fileID: 2024724713}
 --- !u!1001 &1957527890
 Prefab:
   m_ObjectHideFlags: 0
