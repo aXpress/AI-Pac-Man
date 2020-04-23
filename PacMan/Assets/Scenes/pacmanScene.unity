@@ -3825,6 +3825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 0
+  waiting: {fileID: 0}
   ghostSpeed: 0.1
   checkpoints:
   - {fileID: 1436108496}
@@ -4000,6 +4001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 3
+  waiting: {fileID: 0}
   ghostSpeed: 0.1
   checkpoints:
   - {fileID: 2024724713}
@@ -5975,10 +5977,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 5
+  waiting: {fileID: 1589288624}
   ghostSpeed: 0.1
   checkpoints:
-  - {fileID: 1589288624}
   - {fileID: 2024724713}
+  - {fileID: 1436108496}
+  - {fileID: 1687323973}
+  - {fileID: 729132765}
+  - {fileID: 1659898794}
+  - {fileID: 964265985}
+  - {fileID: 1213927018}
+  - {fileID: 1523386860}
+  - {fileID: 1674832312}
+  - {fileID: 1063791757}
+  - {fileID: 1571277267}
+  - {fileID: 1242846566}
+  - {fileID: 255601901}
+  - {fileID: 1897629815}
+  - {fileID: 653236126}
+  - {fileID: 155054109}
+  - {fileID: 670554888}
+  - {fileID: 1846818710}
+  - {fileID: 370334322}
+  - {fileID: 1535235113}
+  - {fileID: 1029337685}
+  - {fileID: 1436108496}
 --- !u!1 &1659898793
 GameObject:
   m_ObjectHideFlags: 0
@@ -6649,10 +6672,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitTime: 7
+  waiting: {fileID: 1589288624}
   ghostSpeed: 0.1
   checkpoints:
-  - {fileID: 1589288624}
   - {fileID: 2024724713}
+  - {fileID: 1033177467}
+  - {fileID: 353169369}
+  - {fileID: 2066414140}
+  - {fileID: 155054109}
+  - {fileID: 670554888}
+  - {fileID: 1846818710}
+  - {fileID: 370334322}
+  - {fileID: 1535235113}
+  - {fileID: 777997133}
+  - {fileID: 729132765}
+  - {fileID: 1687323973}
+  - {fileID: 250682582}
+  - {fileID: 1213927018}
+  - {fileID: 1063791757}
+  - {fileID: 1674832312}
+  - {fileID: 255601901}
+  - {fileID: 541922807}
+  - {fileID: 250682582}
+  - {fileID: 1436108496}
 --- !u!1001 &1957527890
 Prefab:
   m_ObjectHideFlags: 0

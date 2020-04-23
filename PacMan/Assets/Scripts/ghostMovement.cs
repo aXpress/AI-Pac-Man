@@ -6,6 +6,7 @@ public class ghostMovement : MonoBehaviour {
 	// Ghost active variables
 	private bool active = false;
 	public int waitTime;
+	public Transform waiting;
 
 	// Ghost movement variables
 	public float ghostSpeed;
