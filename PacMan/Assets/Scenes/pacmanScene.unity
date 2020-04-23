@@ -3794,8 +3794,8 @@ GameObject:
   m_Component:
   - component: {fileID: 794716833}
   - component: {fileID: 794716836}
-  - component: {fileID: 794716835}
   - component: {fileID: 794716834}
+  - component: {fileID: 794716835}
   - component: {fileID: 794716837}
   m_Layer: 0
   m_Name: orange_ghost_p
@@ -3826,7 +3826,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8417,8 +8417,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1947742383}
   - component: {fileID: 1947742386}
-  - component: {fileID: 1947742385}
   - component: {fileID: 1947742384}
+  - component: {fileID: 1947742385}
   - component: {fileID: 1947742387}
   m_Layer: 0
   m_Name: orange_ghost_ai
@@ -8434,7 +8434,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1947742382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.34, y: -3.6999998, z: 0}
+  m_LocalPosition: {x: 27.34, y: -3.6999998, z: 10}
   m_LocalScale: {x: 0.35, y: 0.35, z: 1}
   m_Children: []
   m_Father: {fileID: 780325322}
@@ -8449,7 +8449,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
