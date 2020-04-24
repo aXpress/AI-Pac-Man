@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class dotBehavior : MonoBehaviour {
 
@@ -8,6 +9,6 @@ public class dotBehavior : MonoBehaviour {
 	{
 		if(collision.gameObject.name == "pacman_sprite_p" || collision.gameObject.name == "pacman_sprite_ai")
 			Destroy(this.gameObject);
-			// Debug.Log("collsion detected");
+			playerScore.score_val++;
 	}
 }
