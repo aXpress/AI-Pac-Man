@@ -13,7 +13,6 @@ public class timerTracker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;
-		//secondsAllowed = 60;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +23,7 @@ public class timerTracker : MonoBehaviour {
 			SceneManager.LoadScene("resultsScene");
 			return;
 		}
-		string timeLeftStr = timeLeft.ToString("f2");
+		string timeLeftStr = timeLeft.ToString("f1");
 		timerText.text = timeLeftStr;
 	}
 }
