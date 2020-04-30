@@ -18,7 +18,7 @@ public class timerTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float timeLeft = secondsAllowed - (Time.time - startTime);
-		if(timeLeft == 0)
+		if(timeLeft <= 0)
 		{
 			SceneManager.LoadScene("resultsScene");
 			return;
