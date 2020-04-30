@@ -13,11 +13,14 @@ public class PacmanMovement : MonoBehaviour {
     void Start() {
         originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
+    
 
     void Update() {
         checkInput();
         Move();
     }
+
+
     void checkInput(){
         if (Input.GetKey(KeyCode.UpArrow) && valid(Vector2.up))
             dest = Vector3.up;
@@ -28,6 +31,8 @@ public class PacmanMovement : MonoBehaviour {
         if (Input.GetKey(KeyCode.LeftArrow) && valid(Vector2.left))
             dest = Vector3.left;
     }
+
+
     bool valid(Vector3 direction) {
         Vector3 pos = transform.position;
         RaycastHit2D hit = Physics2D.Linecast(pos + direction, pos);
@@ -38,6 +43,7 @@ public class PacmanMovement : MonoBehaviour {
         GetComponent<Animator>().SetFloat("DirY", dest.y);
         transform.localPosition += (Vector3)(dest * speed) * Time.deltaTime;
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
 	{
