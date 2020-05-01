@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System;
 public class playerScore : MonoBehaviour {
 
-	public static int score_val;
-	public Text score_text;
+	public static int scoreValue = 0;
+	TextMeshPro score;
+
 	// Use this for initialization
 	void Start () {
-		score_text = GetComponent<Text>();
-		score_val = 0;
+		score = GetComponent<TextMeshPro> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		score_text.text = "" + score_val;
+		score.text = "SCORE: " + scoreValue;
 
 	}
 }
