@@ -17,13 +17,13 @@ public class timerTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float timeLeft = secondsAllowed - (Time.time - startTime);
-		if(timeLeft <= 0)
-		{
-			SceneManager.LoadScene("resultsScene");
-			return;
-		}
-		string timeLeftStr = timeLeft.ToString("f1");
-		timerText.text = timeLeftStr;
+		float timeTaken = (Time.time - startTime);
+		// if(timeTaken <= 0)
+		// {
+		// 	SceneManager.LoadScene("resultsScene");
+		// 	return;
+		// }
+		string timeTakenStr = timeTaken.ToString("f1");
+		timerText.text = timeTakenStr;
 	}
 }
