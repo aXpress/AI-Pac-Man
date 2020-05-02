@@ -2428,6 +2428,7 @@ GameObject:
   - component: {fileID: 410380646}
   - component: {fileID: 410380645}
   - component: {fileID: 410380644}
+  - component: {fileID: 410380648}
   m_Layer: 0
   m_Name: ai_score_text
   m_TagString: Untagged
@@ -2617,6 +2618,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410380642}
   m_Mesh: {fileID: 0}
+--- !u!114 &410380648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410380642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2944d642eff713b4593f20318aed644b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429028727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4214,7 @@ GameObject:
   - component: {fileID: 893734143}
   - component: {fileID: 893734142}
   - component: {fileID: 893734141}
+  - component: {fileID: 893734145}
   m_Layer: 0
   m_Name: player_score_text
   m_TagString: Untagged
@@ -4246,7 +4259,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: ' SCORE:
+  m_text: 'SCORE:
 
 '
   m_isRightToLeft: 0
@@ -4313,13 +4326,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0.49019623, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 893734141}
-    characterCount: 8
+    characterCount: 7
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 2
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -4391,6 +4404,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893734139}
   m_Mesh: {fileID: 0}
+--- !u!114 &893734145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893734139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee99fc0a510954628a83a1edcf4a7b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912405324
 GameObject:
   m_ObjectHideFlags: 0
@@ -4704,6 +4728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 976424975}
+  - component: {fileID: 976424976}
   m_Layer: 0
   m_Name: dotsForPlayer
   m_TagString: Untagged
@@ -4728,6 +4753,17 @@ Transform:
   m_Father: {fileID: 1450193546}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &976424976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 976424974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853a8dec87531a449ba6043b3672b02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &978536481
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,7 +7142,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
