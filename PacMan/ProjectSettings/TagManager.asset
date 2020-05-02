@@ -7,6 +7,9 @@ TagManager:
   - life_one
   - life_two
   - life_three
+  - life_one_ai
+  - life_two_ai
+  - life_three_ai
   layers:
   - Default
   - TransparentFX

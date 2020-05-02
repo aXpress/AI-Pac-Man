@@ -2656,7 +2656,7 @@ GameObject:
   - component: {fileID: 432828913}
   m_Layer: 0
   m_Name: ai_life1
-  m_TagString: Untagged
+  m_TagString: life_one_ai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3033,7 +3033,7 @@ GameObject:
   - component: {fileID: 611885949}
   m_Layer: 0
   m_Name: ai_life2
-  m_TagString: Untagged
+  m_TagString: life_two_ai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3187,7 +3187,7 @@ GameObject:
   - component: {fileID: 644889259}
   m_Layer: 0
   m_Name: ai_life3
-  m_TagString: Untagged
+  m_TagString: life_three_ai
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8157,6 +8157,7 @@ GameObject:
   - component: {fileID: 1757099346}
   - component: {fileID: 1757099345}
   - component: {fileID: 1757099347}
+  - component: {fileID: 1757099348}
   m_Layer: 0
   m_Name: pacman_sprite_ai
   m_TagString: Untagged
@@ -8356,6 +8357,17 @@ MonoBehaviour:
   - {fileID: 1660723262}
   - {fileID: 1837725203}
   delay: 0
+--- !u!114 &1757099348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1757099339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9480afa2fce4b46aac28d76c6766b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1762782972
 GameObject:
   m_ObjectHideFlags: 0
