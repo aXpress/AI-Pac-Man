@@ -15,7 +15,7 @@ public class ghostMovement : MonoBehaviour {
 
 	void FixedUpdate () 
 	{
-		if (!active && (Time.unscaledTime >= waitTime))
+		if (!active && (Time.timeSinceLevelLoad >= waitTime))
 		{
 			active = true;
 		}
