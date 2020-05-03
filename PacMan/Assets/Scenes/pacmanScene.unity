@@ -2428,6 +2428,7 @@ GameObject:
   - component: {fileID: 410380646}
   - component: {fileID: 410380645}
   - component: {fileID: 410380644}
+  - component: {fileID: 410380648}
   m_Layer: 0
   m_Name: ai_score_text
   m_TagString: Untagged
@@ -2617,6 +2618,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410380642}
   m_Mesh: {fileID: 0}
+--- !u!114 &410380648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 410380642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62357b4a0f4169b4c81c8f7c735d6101, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429028727
 GameObject:
   m_ObjectHideFlags: 0
@@ -4202,6 +4214,7 @@ GameObject:
   - component: {fileID: 893734143}
   - component: {fileID: 893734142}
   - component: {fileID: 893734141}
+  - component: {fileID: 893734145}
   m_Layer: 0
   m_Name: player_score_text
   m_TagString: Untagged
@@ -4391,6 +4404,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 893734139}
   m_Mesh: {fileID: 0}
+--- !u!114 &893734145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 893734139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee99fc0a510954628a83a1edcf4a7b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &912405324
 GameObject:
   m_ObjectHideFlags: 0
