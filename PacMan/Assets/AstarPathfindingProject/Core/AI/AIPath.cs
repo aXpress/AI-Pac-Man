@@ -368,7 +368,8 @@ namespace Pathfinding {
 			var forwards = movementPlane.ToPlane(simulatedRotation * (orientation == OrientationMode.YAxisForward ? Vector3.up : Vector3.forward));
 
 			// Check if we have a valid path to follow and some other script has not stopped the character
-			if (interpolator.valid && !isStopped) {
+			if (interpolator.valid && !isStopped) 
+			{
 				// How fast to move depending on the distance to the destination.
 				// Move slower as the character gets closer to the destination.
 				// This is always a value between 0 and 1.
@@ -377,10 +378,14 @@ namespace Pathfinding {
 				if (reachedEndOfPath && whenCloseToDestination == CloseToDestinationMode.Stop) {
 					// Slow down as quickly as possible
 					velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
-				} else {
+				} 
+				else 
+				{
 					velocity2D += MovementUtilities.CalculateAccelerationToReachPoint(dir, dir.normalized*maxSpeed, velocity2D, currentAcceleration, rotationSpeed, maxSpeed, forwards) * deltaTime;
 				}
-			} else {
+			} 
+			else 
+			{
 				slowdown = 1;
 				// Slow down as quickly as possible
 				velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
@@ -401,6 +406,14 @@ namespace Pathfinding {
 			if (lastDeltaTime > 0.00001f && enableRotation) {
 				Vector2 desiredRotationDirection;
 				desiredRotationDirection = velocity2D;
+
+				// //THIS WAS ADDED IN MANUALLY
+				// //THIS WAS NOT IN THE ORIGINAL SCRIPT
+				// Debug.Log("velocity2D = " + velocity2D);
+				// GetComponent<Animator>().SetFloat("DirX", velocity2D.x);
+        		// GetComponent<Animator>().SetFloat("DirY", velocity2D.y);
+				// //FINISHED ADDING IN EVERYTHING
+				// //EVERYTHING GOING FORWARD WAS ORIGINALLY IN THE SCRIPT
 
 				// Rotate towards the direction we are moving in.
 				// Don't rotate when we are very close to the target.
