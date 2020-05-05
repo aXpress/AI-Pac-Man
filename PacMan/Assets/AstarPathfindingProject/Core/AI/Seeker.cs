@@ -152,6 +152,13 @@ namespace Pathfinding {
 			PostProcess = 2,
 		}
 
+		//ADDED IN MANUALLY (NOT OFFICIAL)
+		void FixedUpdate()
+		{
+			AstarPath.active.Scan();
+		}
+		//END OF STUFF ADDED IN MANUALLY
+
 		public Seeker () {
 			onPathDelegate = OnPathComplete;
 		}
