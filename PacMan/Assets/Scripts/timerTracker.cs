@@ -24,12 +24,7 @@ public class timerTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timeTaken = (Time.time - startTime);
-		// if(timeTaken <= 0)
-		// {
-		// 	SceneManager.LoadScene("resultsScene");
-		// 	return;
-		// }
-
+		
 		string timeTakenStr = timeTaken.ToString("f1");
 		timerText.text = timeTakenStr;
 

@@ -5,18 +5,18 @@ using UnityEngine;
 public class AIangler : MonoBehaviour {
 
 	private Vector3 tempPos;
-	public Transform playerTransform;
+	public Transform AIPacmanTransform;
 
 	// Use this for initialization
 	void Start () {
-		playerTransform = this.GetComponent<Transform>();
-		tempPos = playerTransform.position;
+		AIPacmanTransform = this.GetComponent<Transform>();
+		tempPos = AIPacmanTransform.position;
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		GetComponent<Animator>().SetFloat("DirX", (playerTransform.position - tempPos).x);
-        GetComponent<Animator>().SetFloat("DirY", (playerTransform.position - tempPos).y);
-		tempPos = playerTransform.position;
+		GetComponent<Animator>().SetFloat("DirX", (AIPacmanTransform.position - tempPos).x);
+        GetComponent<Animator>().SetFloat("DirY", (AIPacmanTransform.position - tempPos).y);
+		tempPos = AIPacmanTransform.position;
 	}
 }

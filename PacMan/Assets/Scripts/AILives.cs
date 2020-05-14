@@ -26,25 +26,28 @@ public class AILives : MonoBehaviour {
             hit_ghost = true;
         if(collision.name == "orange_ghost_ai")
             hit_ghost = true;
-        if(hit_ghost == true){
-            if(lives == 3){
-                Destroy (GameObject.FindWithTag("life_three_ai"));
-            }
-            else if(lives == 2){
-                Destroy (GameObject.FindWithTag("life_two_ai"));
-            }
-            else if(lives == 1){
-                Destroy (GameObject.FindWithTag("life_one_ai"));
-                SceneManager.LoadScene("resultsScene");
-                return;
-            }
-            lives--;
-            int milliseconds = 1000;
-            Thread.Sleep(milliseconds);
-            gameObject.transform.position = originalPos;
-            //GetComponent<Animator>().SetFloat("DirX", dest.x);
-            //GetComponent<Animator>().SetFloat("DirY", dest.y);
-            Thread.Sleep(milliseconds);
-        }
+        if(hit_ghost == true)
+            AI_collidedWithGhost();
 	}
+
+    void AI_collidedWithGhost()
+    {
+        if(lives == 3)
+            Destroy (GameObject.FindWithTag("life_three_ai"));
+        else if(lives == 2)
+            Destroy (GameObject.FindWithTag("life_two_ai"));
+        else if(lives == 1)
+        {
+            Destroy (GameObject.FindWithTag("life_one_ai"));
+            SceneManager.LoadScene("resultsScene");
+            return;
+        }
+        lives--;
+        int milliseconds = 1000;
+        Thread.Sleep(milliseconds);
+        gameObject.transform.position = originalPos;
+        //GetComponent<Animator>().SetFloat("DirX", dest.x);
+        //GetComponent<Animator>().SetFloat("DirY", dest.y);
+        Thread.Sleep(milliseconds);
+    }
 }

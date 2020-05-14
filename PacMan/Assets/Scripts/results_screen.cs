@@ -13,9 +13,6 @@ public class results_screen : MonoBehaviour {
 
     void Awake() {
         scoreMgr = GameObject.FindObjectOfType<scoreManager>();
-        //scoreMgr.UpdateAIScore(0);
-        //scoreMgr.UpdatePLScore(0);
-        //scoreMgr.UpdateTime(0);
     }
 
     public void PlayAgain() {

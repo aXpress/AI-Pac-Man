@@ -15037,11 +15037,11 @@ Transform:
   - {fileID: 1082891564}
   - {fileID: 2108765445}
   - {fileID: 776108205}
+  - {fileID: 436643157}
   - {fileID: 802733545}
   - {fileID: 2046369195}
   - {fileID: 2023510601}
   - {fileID: 1558546532}
-  - {fileID: 436643157}
   m_Father: {fileID: 1450193546}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16916,7 +16916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a30d7921daad374dae6468377196cdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1757099340}
+  AIPacmanTransform: {fileID: 0}
 --- !u!4 &1758407692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4345411573118636, guid: 4529876adf721f14d839bf54396b8065,

@@ -56,25 +56,30 @@ public class PacmanMovement : MonoBehaviour {
             hit_ghost = true;
         if(collision.name == "orange_ghost_p")
             hit_ghost = true;
-        if(hit_ghost == true){
-            if(lives == 3){
-                Destroy (GameObject.FindWithTag("life_three"));
-            }
-            else if(lives == 2){
-                Destroy (GameObject.FindWithTag("life_two"));
-            }
-            else if(lives == 1){
-                Destroy (GameObject.FindWithTag("life_one"));
-                SceneManager.LoadScene("resultsScene");
-                return;
-            }
-            lives--;
-            int milliseconds = 1000;
-            Thread.Sleep(milliseconds);
-            gameObject.transform.position = originalPos;
-            GetComponent<Animator>().SetFloat("DirX", dest.x);
-            GetComponent<Animator>().SetFloat("DirY", dest.y);
-            Thread.Sleep(milliseconds);
+        if(hit_ghost == true)
+        {
+            collidedWithGhost();
         }
 	}
+
+    void collidedWithGhost()
+    {
+        if(lives == 3)
+            Destroy (GameObject.FindWithTag("life_three"));
+        else if(lives == 2)
+            Destroy (GameObject.FindWithTag("life_two"));
+        else if(lives == 1)
+        {
+            Destroy (GameObject.FindWithTag("life_one"));
+            SceneManager.LoadScene("resultsScene");
+            return;
+        }
+        lives--;
+        int milliseconds = 1000;
+        Thread.Sleep(milliseconds);
+        gameObject.transform.position = originalPos;
+        GetComponent<Animator>().SetFloat("DirX", dest.x);
+        GetComponent<Animator>().SetFloat("DirY", dest.y);
+        Thread.Sleep(milliseconds);
+    }
 }
