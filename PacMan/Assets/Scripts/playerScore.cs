@@ -8,6 +8,7 @@ using System;
 public class playerScore : MonoBehaviour {
 
 	public static int score_val;
+	public static int dots;
 	TextMeshPro score_text;
     private scoreManager scoreMgr;
 
@@ -20,6 +21,7 @@ public class playerScore : MonoBehaviour {
     void Start () {
 		score_text = GetComponent<TextMeshPro>();
 		score_val = 0;
+		dots = 141;
 	}
 	
 	// Update is called once per frame
