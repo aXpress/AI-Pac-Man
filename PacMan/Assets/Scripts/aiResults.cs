@@ -16,7 +16,7 @@ public class aiResults : MonoBehaviour {
 
     void Start()
     {
-        string pScoreStr = scoreMgr.getAIScore().ToString("f1");
-        aiScore.text = pScoreStr;
+        string aiScoreStr = scoreMgr.getAIScore().ToString("f1");
+        aiScore.text = aiScoreStr;
     }
 }

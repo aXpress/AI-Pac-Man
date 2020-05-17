@@ -17,14 +17,14 @@ public class aiScore : MonoBehaviour {
         scoreMgr = GameObject.FindObjectOfType<scoreManager>();
     }
 
-    // Use this for initialization
+
     void Start () {
         score_text = GetComponent<TextMeshPro>();
         score_val = 0;
         ai_dots = 141;
     }
 
-    // Update is called once per frame
+
     void Update () {
         score_text.text = "SCORE: " + score_val;
         scoreMgr.UpdateAIScore(score_val);

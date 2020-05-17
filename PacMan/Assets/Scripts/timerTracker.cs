@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class timerTracker : MonoBehaviour {
 
 	public Text timerText;
-	public float secondsAllowed;
 	float startTime;
     static float timeTaken;
     private scoreManager scoreMgr;
@@ -16,12 +15,12 @@ public class timerTracker : MonoBehaviour {
         scoreMgr = GameObject.FindObjectOfType<scoreManager>();
     }
 
-    // Use this for initialization
+
     void Start () {
 		startTime = Time.time;
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
 		timeTaken = (Time.time - startTime);
 		

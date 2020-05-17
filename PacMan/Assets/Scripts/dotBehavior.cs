@@ -13,6 +13,7 @@ public class dotBehavior : MonoBehaviour {
                Destroy(this.gameObject);
                playerScore.score_val++;
                playerScore.dots--;
+               
                if(playerScore.dots == 0){
                     SceneManager.LoadScene("resultsScene");
                }
@@ -23,6 +24,7 @@ public class dotBehavior : MonoBehaviour {
                Destroy(this.gameObject);
                aiScore.score_val++;
                aiScore.ai_dots--;
+               
                if(aiScore.ai_dots == 0){
                     SceneManager.LoadScene("resultsScene");
                }
