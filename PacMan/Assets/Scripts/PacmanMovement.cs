@@ -100,6 +100,14 @@ public class PacmanMovement : MonoBehaviour
         isPaused = false;
     }
 
+
+    void ghostWaitTime(ghostMovement script, int stdWaitTime)
+    {
+        script.waitTime = stdWaitTime + Time.time;
+        script.active = false;
+    }
+
+
     void ghostRespawn(string name, Vector3 respawnPoint)
     {
         GameObject ghost = GameObject.Find(name);
@@ -107,8 +115,13 @@ public class PacmanMovement : MonoBehaviour
 
         ghostMovement ghostScript = ghost.GetComponent<ghostMovement>();
         ghostScript.cur = 0;
-        ghostScript.waitTime += Time.time;
-        ghostScript.active = false;
+
+        if (name == "pink_ghost_p")
+            ghostWaitTime(ghostScript, 3);
+        else if (name == "blue_ghost_p")
+            ghostWaitTime(ghostScript, 5);
+        else if (name == "orange_ghost_p")
+            ghostWaitTime(ghostScript, 7);
     }
 
 
@@ -134,8 +147,8 @@ public class PacmanMovement : MonoBehaviour
         GetComponent<Animator>().SetFloat("DirY", dest.y);
 
         ghostRespawn("red_ghost_p", redGhostPos);
-        ghostRespawn("blue_ghost_p", blueGhostPos);
         ghostRespawn("pink_ghost_p", pinkGhostPos);
+        ghostRespawn("blue_ghost_p", blueGhostPos);
         ghostRespawn("orange_ghost_p", orangeGhostPos);
     }
 }

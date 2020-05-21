@@ -12,12 +12,6 @@ public class ghostMovement : MonoBehaviour {
 	public float ghostSpeed;
 	public Transform [] checkpoints;
 
-
-	void Start ()
-	{
-		startPosition = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-	}
-
 	void FixedUpdate () 
 	{
 		if (!active && (Time.timeSinceLevelLoad >= waitTime))
