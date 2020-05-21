@@ -8220,9 +8220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 0
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 2123298317}
   - {fileID: 912405325}
@@ -9640,9 +9642,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 7
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 475488266}
   - {fileID: 617050907}
@@ -13021,6 +13025,34 @@ Transform:
   m_Father: {fileID: 589217063}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021440164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1021440166}
+  m_Layer: 0
+  m_Name: Respawn
+  m_TagString: Respawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1021440166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1021440164}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1025752818
 Prefab:
   m_ObjectHideFlags: 0
@@ -14123,9 +14155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 0
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 1436108496}
   - {fileID: 250682582}
@@ -14190,9 +14224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 5
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 475488266}
   - {fileID: 2123298317}
@@ -14658,9 +14694,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 3
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 475488266}
   - {fileID: 617050907}
@@ -15596,9 +15634,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 3
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 2024724713}
   - {fileID: 1033177467}
@@ -20714,9 +20754,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 5
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 2024724713}
   - {fileID: 1436108496}
@@ -24234,9 +24276,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94f412952a1de54097fe6588a3e561b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
+  cur: 0
+  startPosition: {x: 0, y: 0, z: 0}
   waitTime: 7
   ghostSpeed: 0.1
-  startPosition: {x: 0, y: 0, z: 0}
   checkpoints:
   - {fileID: 2024724713}
   - {fileID: 1033177467}

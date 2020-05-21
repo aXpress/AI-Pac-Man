@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RespawnPlayer.cs" />
      <Compile Include="Assets\Scripts\AIangler.cs" />
      <Compile Include="Assets\Scripts\AILives.cs" />
      <Compile Include="Assets\Scripts\aiResults.cs" />

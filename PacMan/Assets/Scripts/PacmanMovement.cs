@@ -6,16 +6,25 @@ using System;
 
 public class PacmanMovement : MonoBehaviour
 {
-    public float speed = 4.0f;
+    public float speed = 7.0f;
     Vector3 dest = Vector2.zero;
     Vector3 originalPos;
     public bool isPaused = false;
-
+    Vector3 redGhostPos;
+    Vector3 blueGhostPos;
+    Vector3 pinkGhostPos;
+    Vector3 orangeGhostPos;
+    
+    
     int lives = 3;
 
     void Start()
     {
-        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        originalPos = gameObject.transform.position;
+        redGhostPos = GameObject.Find("red_ghost_p").transform.position;
+        blueGhostPos = GameObject.Find("blue_ghost_p").transform.position;
+        pinkGhostPos = GameObject.Find("pink_ghost_p").transform.position;
+        orangeGhostPos = GameObject.Find("orange_ghost_p").transform.position;
     }
 
 
@@ -78,6 +87,31 @@ public class PacmanMovement : MonoBehaviour
     }
 
 
+    void pauseGame()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+
+    void resumeGame()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
+    }
+
+    void ghostRespawn(string name, Vector3 respawnPoint)
+    {
+        GameObject ghost = GameObject.Find(name);
+        ghost.transform.position = respawnPoint;
+
+        ghostMovement ghostScript = ghost.GetComponent<ghostMovement>();
+        ghostScript.cur = 0;
+        ghostScript.waitTime += Time.time;
+        ghostScript.active = false;
+    }
+
+
     void collidedWithGhost()
     {
         if (lives == 3)
@@ -90,25 +124,18 @@ public class PacmanMovement : MonoBehaviour
             SceneManager.LoadScene("resultsScene");
             return;
         }
-        
+
         lives--;
         pauseGame();
+
+        // Respawn Pac-Man
         gameObject.transform.position = originalPos;
         GetComponent<Animator>().SetFloat("DirX", dest.x);
         GetComponent<Animator>().SetFloat("DirY", dest.y);
-    }
 
-
-    void pauseGame()
-    {
-        Time.timeScale = 0;
-        isPaused = true;
-    }
-
-
-    void resumeGame()
-    {
-        Time.timeScale = 1;
-        isPaused = false;
+        ghostRespawn("red_ghost_p", redGhostPos);
+        ghostRespawn("blue_ghost_p", blueGhostPos);
+        ghostRespawn("pink_ghost_p", pinkGhostPos);
+        ghostRespawn("orange_ghost_p", orangeGhostPos);
     }
 }

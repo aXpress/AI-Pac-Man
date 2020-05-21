@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ghostMovement : MonoBehaviour {
 
-	private bool active = false;
-	public int waitTime;
-
-
-	public float ghostSpeed;
+	public bool active = false;
+	public int cur = 0;
 	public Vector3 startPosition;
+	public float waitTime;
+	public float ghostSpeed;
 	public Transform [] checkpoints;
-	private int cur = 0;
+
 
 	void Start ()
 	{
@@ -41,6 +41,4 @@ public class ghostMovement : MonoBehaviour {
 		}
 		
 	}
-
-
 }
