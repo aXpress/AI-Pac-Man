@@ -20,17 +20,37 @@ public class AILives : MonoBehaviour {
         bool hit_ghost = false;
 		if(collision.name == "blue_ghost_ai")
             hit_ghost = true;
-        if(collision.name == "pink_ghost_ai")
+        else if(collision.name == "pink_ghost_ai")
             hit_ghost = true;
-        if(collision.name == "red_ghost_ai")
+        else if(collision.name == "red_ghost_ai")
             hit_ghost = true;
-        if(collision.name == "orange_ghost_ai")
+        else if(collision.name == "orange_ghost_ai")
             hit_ghost = true;
-        if(hit_ghost == true)
-            AI_collidedWithGhost();
+
+        if (hit_ghost == true)
+        {
+            respawnAIGhosts();
+            respawnAIPacMan();
+        }
 	}
 
-    void AI_collidedWithGhost()
+    void respawnAIGhosts()
+    {
+        ghostMovement redGhostScript = GameObject.Find("red_ghost_ai").GetComponent<ghostMovement>();
+        redGhostScript.ghostRespawn("red_ghost_ai");
+
+        ghostMovement pinkGhostScript = GameObject.Find("pink_ghost_ai").GetComponent<ghostMovement>();
+        pinkGhostScript.ghostRespawn("pink_ghost_ai");
+
+        ghostMovement blueGhostScript = GameObject.Find("blue_ghost_ai").GetComponent<ghostMovement>();
+        blueGhostScript.ghostRespawn("blue_ghost_ai");
+
+        ghostMovement orangeGhostScript = GameObject.Find("orange_ghost_ai").GetComponent<ghostMovement>();
+        orangeGhostScript.ghostRespawn("orange_ghost_ai");
+    }
+
+
+    void respawnAIPacMan()
     {
         if(lives == 3)
             Destroy (GameObject.FindWithTag("life_three_ai"));
@@ -42,12 +62,10 @@ public class AILives : MonoBehaviour {
             SceneManager.LoadScene("resultsScene");
             return;
         }
+        
         lives--;
-        int milliseconds = 1000;
-        Thread.Sleep(milliseconds);
         gameObject.transform.position = originalPos;
         //GetComponent<Animator>().SetFloat("DirX", dest.x);
         //GetComponent<Animator>().SetFloat("DirY", dest.y);
-        Thread.Sleep(milliseconds);
     }
 }

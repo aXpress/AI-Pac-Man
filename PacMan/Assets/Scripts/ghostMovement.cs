@@ -12,7 +12,12 @@ public class ghostMovement : MonoBehaviour {
 	public float ghostSpeed;
 	public Transform [] checkpoints;
 
-	void FixedUpdate () 
+	void Start ()
+	{
+		startPosition = gameObject.transform.position;
+	}
+
+	void FixedUpdate ()
 	{
 		if (!active && (Time.timeSinceLevelLoad >= waitTime))
 		{
@@ -34,5 +39,26 @@ public class ghostMovement : MonoBehaviour {
 			}
 		}
 		
+	}
+
+
+	void ghostWaitTime(int stdWaitTime)
+	{
+		waitTime = stdWaitTime + Time.timeSinceLevelLoad;
+		active = false;
+	}
+
+
+	public void ghostRespawn(string name)
+	{
+		gameObject.transform.position = startPosition;
+		cur = 0;
+
+		if (name == "pink_ghost_p")
+			ghostWaitTime(3);
+		else if (name == "blue_ghost_p")
+			ghostWaitTime(5);
+		else if (name == "orange_ghost_p")
+			ghostWaitTime(7);
 	}
 }
