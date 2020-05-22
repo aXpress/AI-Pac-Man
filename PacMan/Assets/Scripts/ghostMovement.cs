@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
+// SOURCE: https://noobtuts.com/unity/2d-pacman-game
+
 public class ghostMovement : MonoBehaviour {
 
 	public bool active = false;
