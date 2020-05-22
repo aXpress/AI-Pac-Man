@@ -51,8 +51,28 @@ namespace Pathfinding {
 			}
 
 			index = index % targets.Length;
-			if(targets[index])
-				agent.destination = targets[index].position;
+
+               // Loop to find the closest dot and set destination to it
+               if (targets[index])
+               {
+                    float distanceToClosestDot = Mathf.Infinity;
+                    Transform closestDot = null;
+
+                    foreach (Transform currentDot in targets)
+                    {
+                         if (currentDot)
+                         {
+                              float distanceToDot = (currentDot.transform.position - this.transform.position).sqrMagnitude;
+                              if (distanceToDot < distanceToClosestDot)
+                              {
+                                   distanceToClosestDot = distanceToDot;
+                                   closestDot = currentDot;
+                                   agent.destination = closestDot.position;
+                              }
+                         }
+                    }
+                    
+               } 
 
 			if (search) agent.SearchPath();
 		}
