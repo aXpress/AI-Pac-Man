@@ -153,9 +153,17 @@ namespace Pathfinding {
 		}
 
 		//ADDED IN MANUALLY (NOT OFFICIAL)
+		public int refreshWait; //a value of 0 means never refresh
+		private int counter;
+		void start()
+		{
+			counter = 0;
+		}
 		void FixedUpdate()
 		{
-			AstarPath.active.Scan();
+			if(refreshWait != 0 && counter % refreshWait == 0)
+				AstarPath.active.Scan();
+			counter++;
 		}
 		//END OF STUFF ADDED IN MANUALLY
 

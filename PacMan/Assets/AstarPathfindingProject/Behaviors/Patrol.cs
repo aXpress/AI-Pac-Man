@@ -21,6 +21,8 @@ namespace Pathfinding {
 		/// <summary>Time in seconds to wait at each target</summary>
 		public float delay = 0;
 
+		public int type; //0 is a ghost, 1 is a pacman
+
 		/// <summary>Current target index</summary>
 		int index;
 
@@ -30,6 +32,9 @@ namespace Pathfinding {
 		protected override void Awake () {
 			base.Awake();
 			agent = GetComponent<IAstarAI>();
+
+			index = Random.Range(0, targets.Length);
+			agent.destination = targets[index].position;
 		}
 
 		/// <summary>Update is called once per frame</summary>
@@ -53,26 +58,37 @@ namespace Pathfinding {
 			index = index % targets.Length;
 
                // Loop to find the closest dot and set destination to it
-               if (targets[index])
-               {
-                    float distanceToClosestDot = Mathf.Infinity;
-                    Transform closestDot = null;
+			if(type == 1)
+			{
+				if (targets[index])
+				{
+					float distanceToClosestDot = Mathf.Infinity;
+					Transform closestDot = null;
 
-                    foreach (Transform currentDot in targets)
-                    {
-                         if (currentDot)
-                         {
-                              float distanceToDot = (currentDot.transform.position - this.transform.position).sqrMagnitude;
-                              if (distanceToDot < distanceToClosestDot)
-                              {
-                                   distanceToClosestDot = distanceToDot;
-                                   closestDot = currentDot;
-                                   agent.destination = closestDot.position;
-                              }
-                         }
-                    }
-                    
-               } 
+					foreach (Transform currentDot in targets)
+					{
+						if (currentDot)
+						{
+							float distanceToDot = (currentDot.transform.position - this.transform.position).sqrMagnitude;
+							if (distanceToDot < distanceToClosestDot)
+							{
+								distanceToClosestDot = distanceToDot;
+								closestDot = currentDot;
+								agent.destination = closestDot.position;
+							}
+						}
+					}
+						
+				} 
+			}
+			else if(type == 0 && Vector2.Distance(gameObject.transform.position, agent.destination) < 1)
+			{
+				index = Random.Range(0, targets.Length);
+				agent.destination = targets[index].position;
+				// Debug.Log("currently pursuing checkpoint " + targets[index].name); 
+				// index = (index + 1) % targets.Length;
+
+			}
 
 			if (search) agent.SearchPath();
 		}

@@ -13,6 +13,7 @@ public class ghostMovement : MonoBehaviour {
 	public float waitTime;
 	public float ghostSpeed;
 	public Transform [] checkpoints;
+	public bool ghostAI;
 
 	void Start ()
 	{
@@ -26,7 +27,7 @@ public class ghostMovement : MonoBehaviour {
 			active = true;
 		}
 		
-		if (active)
+		if (active && ghostAI)//only move if this is the script that should control the motion
 		{
 			// Ghost continues moving to destination/checkpoint
 			if (transform.position != checkpoints[cur].position)
