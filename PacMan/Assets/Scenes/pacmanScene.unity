@@ -9750,7 +9750,7 @@ MonoBehaviour:
   - {fileID: 1518030679}
   - {fileID: 912405325}
   - {fileID: 2123298317}
-  ghostAI: 0
+  ghostAI: 1
 --- !u!50 &763699950
 Rigidbody2D:
   serializedVersion: 4
@@ -14380,7 +14380,7 @@ MonoBehaviour:
   - {fileID: 138722007}
   - {fileID: 132368629}
   - {fileID: 2123298317}
-  ghostAI: 0
+  ghostAI: 1
 --- !u!50 &1108603024
 Rigidbody2D:
   serializedVersion: 4
@@ -14850,7 +14850,7 @@ MonoBehaviour:
   - {fileID: 752374501}
   - {fileID: 132368629}
   - {fileID: 2123298317}
-  ghostAI: 0
+  ghostAI: 1
 --- !u!50 &1149513570
 Rigidbody2D:
   serializedVersion: 4
