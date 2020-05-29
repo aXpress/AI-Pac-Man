@@ -14,6 +14,7 @@ public class ghostMovement : MonoBehaviour {
 	public float ghostSpeed;
 	public Transform [] checkpoints;
 	public bool ghostAI;
+	public bool firstStep;
 
 	void Start ()
 	{
@@ -27,7 +28,7 @@ public class ghostMovement : MonoBehaviour {
 			active = true;
 		}
 		
-		if (active && ghostAI)//only move if this is the script that should control the motion
+		if (active && (ghostAI || firstStep))//only move if this is the script that should control the motion
 		{
 			// Ghost continues moving to destination/checkpoint
 			if (transform.position != checkpoints[cur].position)
@@ -40,6 +41,14 @@ public class ghostMovement : MonoBehaviour {
 			{
 				cur = (cur + 1) % checkpoints.Length;
 			}
+
+			if(!ghostAI && cur > 0)
+				firstStep = false;
+		}
+		else if(!active && (ghostAI || firstStep))
+		{
+			Vector2 pos = Vector2.MoveTowards(transform.position, transform.position, ghostSpeed);//cheap trick to make the ghost stay still
+			GetComponent<Rigidbody2D>().MovePosition(pos);
 		}
 		
 	}
