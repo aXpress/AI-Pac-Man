@@ -10,6 +10,7 @@ TagManager:
   - life_one_ai
   - life_two_ai
   - life_three_ai
+  - checkpoint
   layers:
   - Default
   - TransparentFX
@@ -25,12 +26,12 @@ TagManager:
   - nearGhosts
   - playerMap
   - 
+  - dots
+  - playerPacman
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - checkpoints
   - 
   - 
   - 

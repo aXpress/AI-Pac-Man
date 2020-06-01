@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212250617000281910}
   - component: {fileID: 58248867464044636}
   - component: {fileID: 114337701595895932}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: dotAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

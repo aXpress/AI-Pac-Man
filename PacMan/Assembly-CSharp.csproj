@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\AILives.cs" />
      <Compile Include="Assets\Scripts\aiResults.cs" />
      <Compile Include="Assets\Scripts\aiScore.cs" />
+     <Compile Include="Assets\Scripts\checkpointScr.cs" />
      <Compile Include="Assets\Scripts\dotBehavior.cs" />
      <Compile Include="Assets\Scripts\ghostMovement.cs" />
      <Compile Include="Assets\Scripts\main_menu.cs" />
