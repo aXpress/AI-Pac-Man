@@ -23630,7 +23630,6 @@ MonoBehaviour:
   - {fileID: 304420595}
   - {fileID: 1558546532}
   delay: 0
-  type: 1
 --- !u!114 &1757099348
 MonoBehaviour:
   m_ObjectHideFlags: 0
