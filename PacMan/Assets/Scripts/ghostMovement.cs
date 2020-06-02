@@ -10,7 +10,8 @@ public class ghostMovement : MonoBehaviour {
 	public bool active = false;
 	//public int cur = 0;
 	public Vector3 startPosition;
-	public float waitTime;
+	private float waitTime;
+	public float stdWaitTime;
 	public float ghostSpeed;
 	// public Transform [] checkpoints;
 	public Transform startTransform;
@@ -22,6 +23,7 @@ public class ghostMovement : MonoBehaviour {
 	{
 		startPosition = gameObject.transform.position;
 		firstMove = true;
+		ghostWaitTime();
 	}
 
 	void FixedUpdate ()
@@ -33,22 +35,10 @@ public class ghostMovement : MonoBehaviour {
 		
 		if (active)//only move if this is the script that should control the motion
 		{
-			// Ghost continues moving to destination/checkpoint
-			// if (transform.position != checkpoints[cur].position)
-			// {
-			// 	Vector2 pos = Vector2.MoveTowards(transform.position, checkpoints[cur].position, ghostSpeed);
-			// 	GetComponent<Rigidbody2D>().MovePosition(pos);
-			// }
-			// // Ghost has reached destination and will move to next destination/checkpoint
-			// else
-			// {
-			// 	cur = (cur + 1) % checkpoints.Length;
-			// }
-
 			if(firstMove)
 				doFirstMove();
 
-			if(moveToCurTarget)
+			else if(moveToCurTarget)
 			{
 				moveToSpot(curTarget);
 				if(transform.position == curTarget.position)
@@ -63,7 +53,7 @@ public class ghostMovement : MonoBehaviour {
 	}
 
 
-	void ghostWaitTime(int stdWaitTime)
+	void ghostWaitTime()
 	{
 		waitTime = stdWaitTime + Time.timeSinceLevelLoad;
 	}
@@ -72,32 +62,31 @@ public class ghostMovement : MonoBehaviour {
 	public void ghostRespawn(string name)
 	{
 		gameObject.transform.position = startPosition;
-		//cur = 0;
 
-		if (name == "pink_ghost_p")
-			ghostWaitTime(3);
-		else if (name == "blue_ghost_p")
-			ghostWaitTime(5);
-		else if (name == "orange_ghost_p")
-			ghostWaitTime(7);
+		ghostWaitTime();
+
+		GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
 		active = false;
 		firstMove = true;
+		moveToCurTarget = false;
 	}
 
 
 	void doFirstMove()
 	{
+		Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
 		moveToSpot(startTransform);
 
 		if(transform.position == startTransform.position)
 		{
+			rb.velocity = Vector2.zero;
 			firstMove = false;
 			if(Random.Range(0,2) == 1)
-				GetComponent<Rigidbody2D>().velocity = Vector2.left * ghostSpeed;
+				rb.velocity = Vector2.left * ghostSpeed;
 			else
-				GetComponent<Rigidbody2D>().velocity = Vector2.right * ghostSpeed;
+				rb.velocity = Vector2.right * ghostSpeed;
 		}
 	}
 

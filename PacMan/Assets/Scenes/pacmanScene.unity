@@ -8711,8 +8711,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 0
-  ghostSpeed: 5
+  stdWaitTime: 0
+  ghostSpeed: 6
   startTransform: {fileID: 475488266}
 --- !u!50 &654856537
 Rigidbody2D:
@@ -10244,8 +10244,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 7
-  ghostSpeed: 5
+  stdWaitTime: 7
+  ghostSpeed: 6
   startTransform: {fileID: 475488266}
 --- !u!50 &763699950
 Rigidbody2D:
@@ -15147,7 +15147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 0
+  stdWaitTime: 0
   ghostSpeed: 0.1
   startTransform: {fileID: 0}
 --- !u!1 &1108603021
@@ -15195,8 +15195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 5
-  ghostSpeed: 5
+  stdWaitTime: 5
+  ghostSpeed: 6
   startTransform: {fileID: 475488266}
 --- !u!50 &1108603024
 Rigidbody2D:
@@ -15675,8 +15675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 3
-  ghostSpeed: 5
+  stdWaitTime: 3
+  ghostSpeed: 6
   startTransform: {fileID: 475488266}
 --- !u!50 &1149513570
 Rigidbody2D:
@@ -16692,7 +16692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 3
+  stdWaitTime: 0
   ghostSpeed: 0.1
   startTransform: {fileID: 0}
 --- !u!1 &1213927017
@@ -21901,7 +21901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 5
+  stdWaitTime: 0
   ghostSpeed: 0.1
   startTransform: {fileID: 0}
 --- !u!1001 &1622549331
@@ -25616,7 +25616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 0
   startPosition: {x: 0, y: 0, z: 0}
-  waitTime: 7
+  stdWaitTime: 0
   ghostSpeed: 0.1
   startTransform: {fileID: 0}
 --- !u!1001 &1949444499
