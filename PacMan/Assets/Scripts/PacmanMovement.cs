@@ -87,25 +87,31 @@ public class PacmanMovement : MonoBehaviour
 
         if (hit_ghost == true)
         {
-            respawnPacMan();
+            respawnPacMan(true);
             respawnGhosts();
+            
+            AILives opponent = GameObject.Find("pacman_sprite_ai").GetComponent<AILives>();
+            opponent.respawnAIPacMan(false);
         }
     }
 
-    void respawnPacMan()
+    public void respawnPacMan(bool calledHere)
     {
-        if (lives == 3)
-            Destroy(GameObject.FindWithTag("life_three"));
-        else if (lives == 2)
-            Destroy(GameObject.FindWithTag("life_two"));
-        else if (lives == 1)
+        if(calledHere)
         {
-            Destroy(GameObject.FindWithTag("life_one"));
-            SceneManager.LoadScene("resultsScene");
-            return;
-        }
+            if (lives == 3)
+                Destroy(GameObject.FindWithTag("life_three"));
+            else if (lives == 2)
+                Destroy(GameObject.FindWithTag("life_two"));
+            else if (lives == 1)
+            {
+                Destroy(GameObject.FindWithTag("life_one"));
+                SceneManager.LoadScene("resultsScene");
+                return;
+            }
 
-        lives--;
+            lives--;
+        }
         pauseGame();
         gameObject.transform.position = originalPos;
         GetComponent<Animator>().SetFloat("DirX", dest.x);
