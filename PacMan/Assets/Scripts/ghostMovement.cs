@@ -3,17 +3,14 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-// SOURCE: https://noobtuts.com/unity/2d-pacman-game
 
 public class ghostMovement : MonoBehaviour {
 
 	public bool active = false;
-	//public int cur = 0;
 	public Vector3 startPosition;
 	private float waitTime;
 	public float stdWaitTime;
 	public float ghostSpeed;
-	// public Transform [] checkpoints;
 	public Transform startTransform;
 	private bool firstMove;
 	private bool moveToCurTarget;
@@ -33,7 +30,7 @@ public class ghostMovement : MonoBehaviour {
 			active = true;
 		}
 		
-		if (active)//only move if this is the script that should control the motion
+		if (active)  //only move if this is the script that should control the motion
 		{
 			if(firstMove)
 				doFirstMove();
