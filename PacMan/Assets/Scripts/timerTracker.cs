@@ -13,6 +13,7 @@ public class timerTracker : MonoBehaviour {
 
     void Awake() {
         scoreMgr = GameObject.FindObjectOfType<scoreManager>();
+
     }
 
 
