@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/pacmanScene.unity
+- path: Assets/Scenes/resultsScene.unity
   isLoaded: 1
   isActive: 1
