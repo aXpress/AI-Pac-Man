@@ -10,6 +10,7 @@ public class PacmanMovement : MonoBehaviour
     Vector3 dest = Vector2.zero;
     Vector3 originalPos;
     public bool isPaused = false;
+    public AudioSource death;
 
     int lives = 3;
 
@@ -97,6 +98,8 @@ public class PacmanMovement : MonoBehaviour
 
     public void respawnPacMan(bool calledHere)
     {
+        death.Play();
+
         if(calledHere)
         {
             if (lives == 3)

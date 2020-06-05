@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class AILives : MonoBehaviour {
 	int lives = 3;
     Vector3 originalPos;
-    
+    public AudioSource death;
+
     void Start() {
         originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
@@ -55,6 +56,8 @@ public class AILives : MonoBehaviour {
 
     public void respawnAIPacMan(bool calledHere)
     {
+        death.Play();
+
         if(calledHere)
         {
             if(lives == 3)

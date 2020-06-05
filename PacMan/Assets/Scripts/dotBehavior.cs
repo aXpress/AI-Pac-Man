@@ -6,8 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class dotBehavior : MonoBehaviour {
 
-	void OnCollisionEnter2D(Collision2D collision)
+    public AudioSource waka;
+
+    private void Start()
+    {
+        //waka = GameObject.FindGameObjectWithTag("Audio Source - waka").GetComponent<AudioSource>();
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
 	{
+        waka.Play();
+
           if (collision.gameObject.name == "pacman_sprite_p")
           {
                Destroy(this.gameObject);
